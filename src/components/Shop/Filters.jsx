@@ -16,7 +16,7 @@ function Filters({
         <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900">
           Filters
         </h2>
-        <img src="/Shop/Frame.svg" alt="frame icon" className="" />
+        <img src="/Shop/Filter.svg" alt="frame icon" className="" />
         
       </div>
       <hr className="border-gray-300 mb-4" />
