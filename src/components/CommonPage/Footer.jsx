@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-white px-6 md:px-12 lg:px-20 py-12 mt-12">
       {/* Main Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-sm text-gray-600">
-        
+
         {/* Left Side - Brand Info */}
         <div className="pl-2 md:pl-6 lg:pl-10">
           <h3 className="font-bold text-2xl mb-4 text-gray-800">CasaDeEle</h3>
@@ -15,7 +15,10 @@ const Footer = () => {
           </p>
           <div className="text-gray-600">
             <p>
-              <span className="font-semibold">Visión de:</span> Amrit Goyal
+              <span className="font-semibold">Visión de:</span>
+              <a href="https://www.linkedin.com/in/amrit-goyal-9980b1128/" target="_blank" rel="noopener noreferrer" className="ml-1 hover:underline">
+                Amrit Goyal
+              </a>
             </p>
             <p>
               <span className="font-semibold">Diseño web:</span> El quipo
@@ -27,24 +30,24 @@ const Footer = () => {
             <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
               <i className="fab fa-facebook-f"></i>
             </a>
-            <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
+            <a href="https://www.instagram.com/casa_de_ele/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
               <i className="fab fa-instagram"></i>
             </a>
             {/* X (Twitter new icon) */}
-            <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
+            <a href="https://x.com/AmritGoyal74560" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
               <i className="fa-brands fa-x-twitter"></i>
             </a>
-            <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
+            <a href="https://www.linkedin.com/company/casa-de-ele/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
+            <a href="https://www.youtube.com/@CasadeELE" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
               <i className="fab fa-youtube"></i>
             </a>
-            <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
+            <a href="https://in.pinterest.com/ELEconAmrit/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
               <i className="fab fa-pinterest"></i>
             </a>
             {/* Spotify added */}
-            <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
+            <a href="https://open.spotify.com/user/spotify_username_here" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
               <i className="fab fa-spotify"></i>
             </a>
           </div>

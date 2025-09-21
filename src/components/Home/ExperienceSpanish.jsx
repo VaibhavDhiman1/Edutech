@@ -11,23 +11,15 @@ function ExperienceSpanish() {
         {/* Left Paragraph */}
         <div className="w-full md:w-2/3 text-gray-800 text-base md:text-[17px] leading-relaxed font-medium">
           <p>
-            Learning a language doesn’t come naturally, we all feel alien.
-            That’s why we created Ele, an alien who feels like you—a stranger
-            exploring Spanish without barriers. Our motive is to help you
-            experience Spanish through Ele’s Journey.
+            Sometimes learning a language doesn’t come naturally, we all feel alien. Ele, an alien also feels like you—a stranger exploring Spanish without barriers. Our motive is to help you experience Spanish through Ele’s Journey..
           </p>
           <br />
           <p>
-            We welcome diverse Spanish dialects, LGBTQ+ voices, and Indigenous
-            and Afrodescendant cultures, with a focus on emotional intelligence
-            and cultural empathy. We offer personalized, contextual learning
-            through storytelling and interactive projects led by trained
-            multilingual and native teachers.
+            We welcome diverse Spanish dialects, LGBTQ+ voices, and Indigenous and Afrodescendant cultures, with a focus on real-life experiences, emotional connection, and cultural empathy. We offer personalized, contextual learning through storytelling and interactive projects led by trained multilingual and native teachers.
           </p>
           <br />
           <p>
-            Ele represents minorities and neurodiverse learners, creating an
-            inclusive community where your identity shapes your Spanish journey.
+            Ele is a lifelong learner who represents the struggles of a Spanish student, minorities and neurodiverse learners, creating an inclusive community to join your Spanish journey.
           </p>
         </div>
 

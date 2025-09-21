@@ -4,9 +4,14 @@ import { useNavigate } from "react-router-dom";
 function HeroSection() {
   const navigate = useNavigate();
 
+  const handleButtonClickRight = (keyword) => {
+    // Navigate and pass a state object with the keyword
+    navigate('/material', { state: { keyword: keyword } });
+  };
+
   const handleButtonClick = () => {
     // Navigate and pass a state object
-    navigate('/material', { state: { fromHero: true } });
+    navigate('/school', { state: { fromHero: true } });
   };
 
   return (
@@ -20,8 +25,7 @@ function HeroSection() {
             Spanish For <br /> Students
           </h2>
           <p className="text-gray-600 mb-6 text-base md:text-lg leading-relaxed">
-            Learn business Spanish from the best teachers worldwide. Fully
-            adaptive curriculum for your needs. 100% online courses.
+            Learn business Spanish from the best teachers worldwide. Fully adaptive curriculum for your needs. 100% online courses.
           </p>
           <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 lg:px-16 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
             <span className="leading-tight">
@@ -42,15 +46,14 @@ function HeroSection() {
 
         {/* Right Card */}
         <div className="p-8 border-2 border-dashed border-gray-300 rounded-2xl w-full max-w-md shadow-xl bg-white relative z-10 min-h-[24rem]">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Formación</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Teacher Material</h2>
           <p className="text-gray-600 mb-6 text-base md:text-lg leading-relaxed">
-            Actualízate y mejora tus prácticas docentes en la enseñanza de
-            español. Recibe capacitación con expertos para crear cursos, material
-            auténtico y adaptado para tener estudiantes a largo plazo.
+            Upgrade your teaching skills with Business Spanish materials. Adaptive resources designed for teachers. 100% online.
+
           </p>
-          <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 lg:px-16 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
+          <button onClick={() => handleButtonClickRight("Teacher Material")} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 lg:px-16 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
             <span className="leading-tight">
-              Actualízate, ¡Mejores <br /> estudiantes y pagos!
+              Attract long-term, high-paying students now
             </span>
             <span className="text-2xl">→</span>
           </button>
@@ -65,8 +68,10 @@ function HeroSection() {
             Spanish For <br /> Students
           </h2>
           <p className="text-gray-600 mb-6 text-base md:text-lg leading-relaxed">
-            Learn business Spanish from the best teachers worldwide. Fully
-            adaptive curriculum for your needs. 100% online courses.
+            Learn business Spanish from the best teachers worldwide. Fully adaptive curriculum for your needs. 100% online courses.
+
+
+
           </p>
           <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
             <span className="leading-tight">
@@ -87,15 +92,15 @@ function HeroSection() {
 
         {/* Right Card */}
         <div className="p-8 border-2 border-dashed border-gray-300 rounded-2xl w-full max-w-md shadow-sm bg-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Formación</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Teacher Material</h2>
           <p className="text-gray-600 mb-6 text-base md:text-lg leading-relaxed">
-            Actualízate y mejora tus prácticas docentes en la enseñanza de
-            español. Recibe capacitación con expertos para crear cursos, material
-            auténtico y adaptado para tener estudiantes a largo plazo.
+            Upgrade your teaching skills with Business Spanish materials. Adaptive resources designed for teachers. 100% online.
           </p>
-          <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
+          <button onClick={handleButtonClickRight} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
             <span className="leading-tight">
-              Actualízate, ¡Mejores <br /> estudiantes y pagos!
+              Attract long-term, high-paying students now.
+
+
             </span>
             <span className="text-2xl">→</span>
           </button>

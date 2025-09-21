@@ -1,12 +1,22 @@
 import React from "react";
-
 function WaitlistSection() {
   const cards = [
-    { img: "School/image 3.svg", title: "Conversational Group" },
-    { img: "School/image 2.svg", title: "1 to 1 corporate batches" },
-    { img: "School/image 4.svg", title: "Group corporate batches" },
+    { img: "School/image 3.svg", title: "Conversational group waitlist" },
+    { img: "School/image 2.svg", title: "One on one waitlist" },
+    { img: "School/image 4.svg", title: "Group classes waitlist" },
   ];
 
+  const handleButtonClick = (url) => {
+    if (url) {
+      window.open(url, '_blank');
+    }
+  };
+
+  const waitlistUrls = {
+    "Conversational group waitlist": "https://docs.google.com/forms/d/e/1FAIpQLSdlVcX3JEIW0ZIMWvIyanqa3bc3H17ee5gyKhjUkU9MdjM9yg/viewform?usp=sharing",
+    "One on one waitlist": "https://docs.google.com/forms/d/e/1FAIpQLSfvcjPs3JxRhQLMIoxdZ1kROgQ8vEUXr7CPXEoMXsaWInUsvw/viewform?usp=sharing",
+    "Group classes waitlist": "https://docs.google.com/forms/d/e/1FAIpQLSfIGmqGZU7D3mwvOGJxv2QqtBaBw6frYPCZWAg9-CX2pJbFzQ/viewform?usp=sharing",
+  };
   return (
     <div className="text-center bg-[#FDF2F2] py-12">
       {/* Top Small Image */}
@@ -42,7 +52,9 @@ function WaitlistSection() {
               <p className="text-black font-light text-base mb-6 text-left">
                 Ipsum is simply dummy text of the printing and
               </p>
-              <button className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white py-2 px-6 rounded-full w-full  transition text-xl mt-auto">
+              <button
+                onClick={() => handleButtonClick(waitlistUrls[card.title])}
+                className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white py-2 px-6 rounded-full w-full  transition text-xl mt-auto">
                 Try It!
               </button>
             </div>

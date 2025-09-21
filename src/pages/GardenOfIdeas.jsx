@@ -20,10 +20,10 @@ function Garden() {
       <section className="flex justify-center items-center w-full bg-white py-16">
         <div className="w-full max-w-6xl text-center px-6">
           {/* Heading */}
-          <h1 className="text-4xl font-bold text-black mb-6 py-16">
+          <h1 className="text-4xl font-bold text-black py-16">
             El jardín de ideas
           </h1>
-
+          <p className="text-2xl text-center text-black mb-12">Share your thoughts and suggestions to help us grow CasaDeELE <br /> and make your Spanish learning journey even better.</p>
           {/* Plant Images */}
           <div className="flex justify-center flex-wrap gap-8 mb-12">
             <img src="GardenOfIdeas\a-2d-digital-illustration-of-a-glowing-spiral-shap.svg" alt="plant 1" className="w-[150px] h-[150px]" />

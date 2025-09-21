@@ -4,27 +4,27 @@
 const services = [
   {
     icon: <img src="/School/Frame.svg" alt="book.svg" className="w-20" />,
-    title: 'Curriculum–Aligned Spanish Learning',
+    title: 'Personalized curriculum ',
     description:
-      'Our content is designed to complement Indian school syllabi (CBSE, ICSE, IB), with structured chapters, grammar lessons, and vocabulary tailored for academic success.',
+      'We create lessons that are tailored to your pace, goals, and interests so you can learn Spanish efficiently and enjoyably.',
   },
   {
     icon: <img src="/School/Frame (1).svg" className="w-20 " alt="Game.svg" />,
-    title: 'Interactive & Visual Learning',
+    title: 'Interactive and visual learning',
     description:
-      'Learning with Ele feels like storytelling! Through comics, games, and animated scenes, students stay engaged while grasping key language concepts intuitively.',
+      ' You will engage with videos, activities, and illustrations that make every lesson clear, fun, and easy to remember.',
   },
   {
     icon: <img src="/School/Frame (2).svg" className="w-20" alt="chart.svg" />,
-    title: 'Teacher–Friendly Dashboard & Reports',
+    title: 'Preparation for international exams DELE and SIELE integrated',
     description:
-      'Easy-to-use teacher tools for tracking student progress, assigning lessons, and evaluating performance with real-time analytics and printable reports.',
+      'Our courses and evaluation follow the international standards set by MCER and PCIC. We guide you step by step through DELE and SIELE exam preparation while keeping your regular lessons meaningful.',
   },
   {
     icon: <img src="/School/Frame (3).svg" className="w-20" alt="Globe.svg" />,
-    title: 'Cultural + Practical Focus',
+    title: 'Courtesy and cultural behavior',
     description:
-      'Beyond language, we introduce students to Hispanic cultures through music, food, festivals, and real-life scenarios—preparing them for global exposure.',
+      'We help you communicate politely and confidently while understanding the customs and culture of Spanish-speaking communities.',
   },
 ];
 

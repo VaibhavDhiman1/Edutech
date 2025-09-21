@@ -1,12 +1,15 @@
-import React, { useState, useRef, useMemo } from "react";
+import React, { useState, useRef, useMemo, useEffect } from "react";
 import ToggleButtons from "../components/Material/MaterialPage/ToggleButtons";
 import SectionHeader from "../components/Material/MaterialPage/SectionHeader";
 import CardSlider from "../components/Material/MaterialPage/CardSlider";
 import cardData from "../components/Material/MaterialPage/cardData";
 import mostlyliked from "../components/Material/MaterialPage/mostlyliked";
 import SearchBar from "../components/Searchbar/Searchbar";
+import { useLocation } from "react-router-dom";
 
 function MaterialPage() {
+
+  const location = useLocation();
   const [activeButton, setActiveButton] = useState("Explore");
   const [searchQuery, setSearchQuery] = useState("");
   const [showSearchResults, setShowSearchResults] = useState(false);
@@ -46,6 +49,17 @@ function MaterialPage() {
     setSearchQuery(query);
     setShowSearchResults(query.length > 0);
   };
+
+
+  useEffect(() => {
+    // अगर URL state में keyword मिलता है...
+    if (location.state?.keyword) {
+      // ... तो सिर्फ activeButton को 'Keyword' पर सेट करें
+      setActiveButton("Keyword");
+      // setSearchQuery को यहाँ से हटा दें, ताकि सर्चबार खाली रहे
+    }
+  }, [location.state]);
+
 
   return (
     <div
@@ -104,9 +118,9 @@ function MaterialPage() {
           ) : (
             <div className="text-center flex justify-center py-12 -mt-11">
               <img
-                src="/Material/errrorpage.svg"  
+                src="/Material/errrorpage.svg"
                 alt="No results"
-              className=""
+                className=""
               />
             </div>
           )}

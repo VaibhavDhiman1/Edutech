@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function Searchbar({ onSearch, activeButton }) {
   const [openMenu, setOpenMenu] = useState(null);
@@ -10,7 +11,16 @@ function Searchbar({ onSearch, activeButton }) {
     country: "Country",
   });
   const [searchText, setSearchText] = useState("");
+  const location = useLocation();
 
+  // New useEffect hook to handle navigation state
+  useEffect(() => {
+    if (location.state && location.state.keyword) {
+      setSearchText(location.state.keyword);
+    }
+  }, [location.state]);
+
+  
   const toggleMenu = (menu) => {
     setOpenMenu(openMenu === menu ? null : menu);
   };
@@ -74,161 +84,154 @@ function Searchbar({ onSearch, activeButton }) {
       >
         {selectedMenu[menuKey]}
       </div>
-
       {!isLast && (
         <span className="absolute right-0 top-1/2 transform -translate-y-1/2 h-8 w-[1px] bg-gray-400 group-hover:hidden z-0"></span>
       )}
-
       {openMenu === menuKey && children}
     </div>
   );
 
   // ✅ MobileSearch with dropdowns like desktop, screen ke andar
-const MobileSearch = () => (
-  <div className="flex flex-col w-full bg-gray-200 rounded-3xl shadow-md p-3 space-y-3 relative">
-    {activeButton === "Explore" && (
-      <>
-        {/* Room */}
-        <div className="relative w-full">
-          <div
-            onClick={() => toggleMenu("room")}
-            className="w-full bg-white px-4 py-2 rounded-lg shadow cursor-pointer"
-          >
-            {selectedMenu.room}
-          </div>
-          {openMenu === "room" && (
-            <div className="absolute left-0 top-12 w-full max-h-60 overflow-auto bg-white shadow-lg rounded-lg z-30 p-2">
-              {[ "Music", "Videos", "Podcast", "Resources/Chapters",
-                 "Spanish for corporate", "Spanish for health professionals",
-                 "Spanish for IB students" ].map(item => (
-                <div
-                  key={item}
-                  className="px-3 py-2 rounded-md hover:bg-gray-100 cursor-pointer"
-                  onClick={() => handleSelect("room", item)}
-                >
-                  {item}
-                </div>
-              ))}
+  const MobileSearch = () => (
+    <div className="flex flex-col w-full bg-gray-200 rounded-3xl shadow-md p-3 space-y-3 relative">
+      {activeButton === "Explore" && (
+        <>
+          {/* Room */}
+          <div className="relative w-full">
+            <div
+              onClick={() => toggleMenu("room")}
+              className="w-full bg-white px-4 py-2 rounded-lg shadow cursor-pointer"
+            >
+              {selectedMenu.room}
             </div>
-          )}
-        </div>
-
-        {/* Subcategory */}
-        <div className="relative w-full">
-          <div
-            onClick={() => toggleMenu("subcategory")}
-            className="w-full bg-white px-4 py-2 rounded-lg shadow cursor-pointer"
-          >
-            {selectedMenu.subcategory}
+            {openMenu === "room" && (
+              <div className="absolute left-0 top-12 w-full max-h-60 overflow-auto bg-white shadow-lg rounded-lg z-30 p-2">
+                {["Music", "Videos", "Podcast", "Resources/Chapters",
+                  "Spanish for corporate", "Spanish for health professionals",
+                  "Spanish for IB students"].map(item => (
+                    <div
+                      key={item}
+                      className="px-3 py-2 rounded-md hover:bg-gray-100 cursor-pointer"
+                      onClick={() => handleSelect("room", item)}
+                    >
+                      {item}
+                    </div>
+                  ))}
+              </div>
+            )}
           </div>
-          {openMenu === "subcategory" && (
-            <div className="absolute left-0 top-12 w-full max-h-60 overflow-auto bg-white shadow-lg rounded-lg z-30 p-2">
-              {["Active learning","For leisure","Short movies","Long movies","Reels / Shorts"].map(item => (
-                <div
-                  key={item}
-                  className="px-3 py-2 rounded-md hover:bg-gray-100 cursor-pointer"
-                  onClick={() => handleSelect("subcategory", item)}
-                >
-                  {item}
-                </div>
-              ))}
+          {/* Subcategory */}
+          <div className="relative w-full">
+            <div
+              onClick={() => toggleMenu("subcategory")}
+              className="w-full bg-white px-4 py-2 rounded-lg shadow cursor-pointer"
+            >
+              {selectedMenu.subcategory}
             </div>
-          )}
-        </div>
-
-        {/* Theme */}
-        <div className="relative w-full">
-          <div
-            onClick={() => toggleMenu("theme")}
-            className="w-full bg-white px-4 py-2 rounded-lg shadow cursor-pointer"
-          >
-            {selectedMenu.theme}
+            {openMenu === "subcategory" && (
+              <div className="absolute left-0 top-12 w-full max-h-60 overflow-auto bg-white shadow-lg rounded-lg z-30 p-2">
+                {["Active learning", "For leisure", "Short movies", "Long movies", "Reels / Shorts"].map(item => (
+                  <div
+                    key={item}
+                    className="px-3 py-2 rounded-md hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleSelect("subcategory", item)}
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-          {openMenu === "theme" && (
-            <div className="absolute left-0 top-12 w-full max-h-60 overflow-auto bg-white shadow-lg rounded-lg z-30 p-2">
-              {["Type 1","Type 2","Type 3","Type 4"].map(item => (
-                <div
-                  key={item}
-                  className="px-3 py-2 rounded-md hover:bg-gray-100 cursor-pointer"
-                  onClick={() => handleSelect("theme", item)}
-                >
-                  {item}
-                </div>
-              ))}
+          {/* Theme */}
+          <div className="relative w-full">
+            <div
+              onClick={() => toggleMenu("theme")}
+              className="w-full bg-white px-4 py-2 rounded-lg shadow cursor-pointer"
+            >
+              {selectedMenu.theme}
             </div>
-          )}
-        </div>
-
-        {/* Level */}
-        <div className="relative w-full">
-          <div
-            onClick={() => toggleMenu("level")}
-            className="w-full bg-white px-4 py-2 rounded-lg shadow cursor-pointer"
-          >
-            {selectedMenu.level}
+            {openMenu === "theme" && (
+              <div className="absolute left-0 top-12 w-full max-h-60 overflow-auto bg-white shadow-lg rounded-lg z-30 p-2">
+                {["Type 1", "Type 2", "Type 3", "Type 4"].map(item => (
+                  <div
+                    key={item}
+                    className="px-3 py-2 rounded-md hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleSelect("theme", item)}
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-          {openMenu === "level" && (
-            <div className="absolute left-0 top-12 w-full max-h-60 overflow-auto bg-white shadow-lg rounded-lg z-30 p-4 grid grid-cols-3 gap-3">
-              {["A1","A2","B1","B2","C1","C2"].map(level => (
-                <div
-                  key={level}
-                  className="w-full text-center py-2 rounded-md hover:bg-gray-100 cursor-pointer"
-                  onClick={() => handleSelect("level", level)}
-                >
-                  {level}
-                </div>
-              ))}
+          {/* Level */}
+          <div className="relative w-full">
+            <div
+              onClick={() => toggleMenu("level")}
+              className="w-full bg-white px-4 py-2 rounded-lg shadow cursor-pointer"
+            >
+              {selectedMenu.level}
             </div>
-          )}
-        </div>
-
-        {/* Country */}
-        <div className="relative w-full">
-          <div
-            onClick={() => toggleMenu("country")}
-            className="w-full bg-white px-4 py-2 rounded-lg shadow cursor-pointer"
-          >
-            {selectedMenu.country}
+            {openMenu === "level" && (
+              <div className="absolute left-0 top-12 w-full max-h-60 overflow-auto bg-white shadow-lg rounded-lg z-30 p-4 grid grid-cols-3 gap-3">
+                {["A1", "A2", "B1", "B2", "C1", "C2"].map(level => (
+                  <div
+                    key={level}
+                    className="w-full text-center py-2 rounded-md hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleSelect("level", level)}
+                  >
+                    {level}
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-          {openMenu === "country" && (
-            <div className="absolute left-0 top-12 w-full max-h-60 overflow-auto bg-white shadow-lg rounded-lg z-30 p-2">
-              {countryItems.map(c => (
-                <div
-                  key={c.code}
-                  className="px-3 py-2 rounded-md hover:bg-gray-100 cursor-pointer"
-                  onClick={() => handleSelect("country", c.name)}
-                >
-                  {c.name}
-                </div>
-              ))}
+          {/* Country */}
+          <div className="relative w-full">
+            <div
+              onClick={() => toggleMenu("country")}
+              className="w-full bg-white px-4 py-2 rounded-lg shadow cursor-pointer"
+            >
+              {selectedMenu.country}
             </div>
-          )}
-        </div>
-      </>
-    )}
+            {openMenu === "country" && (
+              <div className="absolute left-0 top-12 w-full max-h-60 overflow-auto bg-white shadow-lg rounded-lg z-30 p-2">
+                {countryItems.map(c => (
+                  <div
+                    key={c.code}
+                    className="px-3 py-2 rounded-md hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleSelect("country", c.name)}
+                  >
+                    {c.name}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </>
+      )}
 
-    {/* Keyword input */}
-    {activeButton === "Keyword" && (
-      <input
-        type="text"
-        placeholder="Search by keyword..."
-        value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
-        onKeyDown={handleKeyPress}
-        className="w-full rounded-lg p-2 outline-none"
-      />
-    )}
+      {/* Keyword input */}
+      {activeButton === "Keyword" && (
+        <input
+          type="text"
+          placeholder="Search by keyword..."
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+          onKeyDown={handleKeyPress}
+          className="w-full rounded-lg p-2 outline-none"
+        />
+      )}
 
-    {/* Search button */}
-    <button
-      className="bg-red-700 text-white rounded-xl p-2 w-full"
-      onClick={handleSearch}
-    >
-      Search
-    </button>
-  </div>
-);
-
+      {/* Search button */}
+      <button
+        className="bg-red-700 text-white rounded-xl p-2 w-full"
+        onClick={handleSearch}
+      >
+        Search
+      </button>
+    </div>
+  );
 
   return (
     <div className="flex justify-center mt-10 w-full">
@@ -262,7 +265,6 @@ const MobileSearch = () => (
                 ))}
               </div>
             )}
-
             {renderMenuItem(
               "subcategory",
               <div className="absolute top-20 left-0 w-64 bg-white shadow-lg rounded-xl p-4 z-20">
@@ -277,7 +279,6 @@ const MobileSearch = () => (
                 ))}
               </div>
             )}
-
             {renderMenuItem(
               "theme",
               <div className="absolute top-20 left-0 w-40 bg-white shadow-lg rounded-xl p-4 z-20">
@@ -292,7 +293,6 @@ const MobileSearch = () => (
                 ))}
               </div>
             )}
-
             {renderMenuItem(
               "level",
               <div className="absolute grid-cols-2 gap-3 justify-center grid top-20 left-0 w-[166px] bg-white shadow-lg rounded-xl h-[189px] px-7 py-4 z-20">
@@ -307,7 +307,6 @@ const MobileSearch = () => (
                 ))}
               </div>
             )}
-
             {renderMenuItem(
               "country",
               <div className="absolute top-20 left-0 w-[230px] bg-white shadow-lg rounded-xl p-4 z-20">
@@ -335,14 +334,12 @@ const MobileSearch = () => (
             className="w-full bg-transparent outline-none px-2"
           />
         )}
-
         <div className="ml-auto flex items-center">
           <button className="p-3" onClick={handleSearch}>
             <img src="/Searchbar/Button.svg" alt="search" />
           </button>
         </div>
       </div>
-
       {/* Mobile: visible only on small screens */}
       <div className="sm:hidden w-full px-4">
         <MobileSearch />
