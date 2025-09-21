@@ -23,7 +23,7 @@ function HeroSection() {
             Learn business Spanish from the best teachers worldwide. Fully
             adaptive curriculum for your needs. 100% online courses.
           </p>
-          <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 lg:px-32 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
+          <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 lg:px-16 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
             <span className="leading-tight">
               Start now to unlock <br /> high-paying jobs
             </span>
