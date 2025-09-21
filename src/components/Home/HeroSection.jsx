@@ -12,11 +12,10 @@ function HeroSection() {
   return (
     <section className="px-6 py-20 md:px-12 lg:px-24 bg-white relative lg:pb-52">
 
-      {/* Laptop/Desktop Layout */}
-      {/* CHANGE: Restored the large gap and made cards/buttons responsive at the lg breakpoint */}
-      <div className="hidden lg:flex flex-row items-start justify-center gap-16 xl:gap-[24rem] relative">
+      {/* Laptop/Desktop Layout (unchanged) */}
+      <div className="hidden lg:flex flex-row items-start justify-center gap-[24rem] relative">
         {/* Left Card */}
-        <div className="p-8 border-2 border-dashed border-gray-300 rounded-2xl w-full max-w-md lg:max-w-sm xl:max-w-md shadow-xl bg-white relative z-10 min-h-[24rem]">
+        <div className="p-8 border-2 border-dashed border-gray-300 rounded-2xl w-full max-w-md shadow-xl bg-white relative z-10 min-h-[24rem]">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-snug">
             Spanish For <br /> Students
           </h2>
@@ -24,7 +23,7 @@ function HeroSection() {
             Learn business Spanish from the best teachers worldwide. Fully
             adaptive curriculum for your needs. 100% online courses.
           </p>
-          <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 xl:px-16 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
+          <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 lg:px-20 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
             <span className="leading-tight">
               Start now to unlock <br /> high-paying jobs
             </span>
@@ -42,14 +41,14 @@ function HeroSection() {
         </div>
 
         {/* Right Card */}
-        <div className="p-8 border-2 border-dashed border-gray-300 rounded-2xl w-full max-w-md lg:max-w-sm xl:max-w-md shadow-xl bg-white relative z-10 min-h-[24rem]">
+        <div className="p-8 border-2 border-dashed border-gray-300 rounded-2xl w-full max-w-md shadow-xl bg-white relative z-10 min-h-[24rem]">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Formación</h2>
           <p className="text-gray-600 mb-6 text-base md:text-lg leading-relaxed">
             Actualízate y mejora tus prácticas docentes en la enseñanza de
             español. Recibe capacitación con expertos para crear cursos, material
             auténtico y adaptado para tener estudiantes a largo plazo.
           </p>
-          <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 xl:px-16 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
+          <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 lg:px-16 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
             <span className="leading-tight">
               Actualízate, ¡Mejores <br /> estudiantes y pagos!
             </span>
@@ -58,7 +57,7 @@ function HeroSection() {
         </div>
       </div>
 
-      {/* Mobile/Tablet Layout (unchanged from the last perfect version) */}
+      {/* Mobile/Tablet Layout */}
       <div className="flex flex-col lg:hidden items-center gap-8">
         {/* Left Card */}
         <div className="p-8 border-2 border-dashed border-gray-300 rounded-2xl w-full max-w-md shadow-sm bg-white">
@@ -69,8 +68,8 @@ function HeroSection() {
             Learn business Spanish from the best teachers worldwide. Fully
             adaptive curriculum for your needs. 100% online courses.
           </p>
-          <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white w-full px-4 py-3 rounded-lg flex items-center justify-between text-sm md:text-base">
-            <span className="leading-tight text-left">
+          <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
+            <span className="leading-tight">
               Start now to unlock <br /> high-paying jobs
             </span>
             <span className="text-2xl">→</span>
@@ -94,8 +93,8 @@ function HeroSection() {
             español. Recibe capacitación con expertos para crear cursos, material
             auténtico y adaptado para tener estudiantes a largo plazo.
           </p>
-          <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white w-full px-4 py-3 rounded-lg flex items-center justify-between text-sm md:text-base">
-            <span className="leading-tight text-left">
+          <button onClick={handleButtonClick} className="bg-[rgba(173,21,24,1)] hover:bg-red-700 text-white px-6 py-3 rounded-lg flex items-center gap-3 text-sm md:text-base">
+            <span className="leading-tight">
               Actualízate, ¡Mejores <br /> estudiantes y pagos!
             </span>
             <span className="text-2xl">→</span>
