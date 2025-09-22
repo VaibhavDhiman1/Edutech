@@ -14,9 +14,9 @@ function HeroSection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-          <button className=" text-[rgba(173,21,24,1)] border border-[rgba(173,21,24,1)] py-4 px-8 rounded-lg w-full sm:w-[280px] hover:bg-[rgba(173,21,24,1)] hover:text-white">
+          {/* <button className=" text-[rgba(173,21,24,1)] border border-[rgba(173,21,24,1)] py-4 px-8 rounded-lg w-full sm:w-[280px] hover:bg-[rgba(173,21,24,1)] hover:text-white">
             Book a Call
-          </button>
+          </button> */}
           <button onClick={() => navigate('/contact')} className="text-[rgba(173,21,24,1)] border border-[rgba(173,21,24,1)] py-4 px-8 rounded-lg w-full sm:w-[280px] hover:bg-[rgba(173,21,24,1)] hover:text-white">
             Fill the form
           </button>

@@ -21,13 +21,13 @@ const Footer = () => {
               </a>
             </p>
             <p>
-              <span className="font-semibold">Diseño web:</span> El quipo
+              {/* <span className="font-semibold">Diseño web:</span> El quipo */}
             </p>
           </div>
 
           {/* Social Icons */}
           <div className="flex flex-wrap items-center gap-3 mt-6 text-gray-500">
-            <a href="#" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
+            <a href="https://www.instagram.com/casa_de_ele/" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
               <i className="fab fa-facebook-f"></i>
             </a>
             <a href="https://www.instagram.com/casa_de_ele/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 flex items-center justify-center rounded-full border border-gray-400 hover:bg-red-600 hover:text-white transition">
@@ -59,11 +59,11 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-3">Explore</h3>
             <ul className="space-y-2">
-              <li><a href="#">All Rooms</a></li>
-              <li><a href="#">Courses</a></li>
-              <li><a href="#">About Ele</a></li>
-              <li><a href="#">Shop</a></li>
-              <li><a href="#">Newsletter</a></li>
+              <li>All Rooms</li>
+              <li><a href="/material">Courses</a></li>
+              <li><a href="/about">About Ele</a></li>
+              <li><a href="/shop">Shop</a></li>
+              <li>Newsletter</li>
             </ul>
           </div>
 
@@ -71,11 +71,11 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-3">Learning</h3>
             <ul className="space-y-2">
-              <li><a href="#">Engineers & IT</a></li>
-              <li><a href="#">Teacher Forum</a></li>
-              <li><a href="#">IB Spanish</a></li>
-              <li><a href="#">Music</a></li>
-              <li><a href="#">Movies</a></li>
+              <li>Engineers & IT</li>
+              <li>Teacher Forum</li>
+              <li>IB Spanish</li>
+              <li>Music</li>
+              <li>Movies</li>
             </ul>
           </div>
 
@@ -83,10 +83,10 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-3">Support</h3>
             <ul className="space-y-2">
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">How to use</a></li>
-              <li><a href="#">Terms of Services</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+              <li>Privacy Policy</li>
+              <li>How to use</li>
+              <li>Terms of Services</li>
             </ul>
           </div>
         </div>

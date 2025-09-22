@@ -13,9 +13,9 @@ function WaitlistSection() {
   };
 
   const waitlistUrls = {
-    "Conversational group waitlist": "https://docs.google.com/forms/d/e/1FAIpQLSdlVcX3JEIW0ZIMWvIyanqa3bc3H17ee5gyKhjUkU9MdjM9yg/viewform?usp=sharing",
-    "One on one waitlist": "https://docs.google.com/forms/d/e/1FAIpQLSfvcjPs3JxRhQLMIoxdZ1kROgQ8vEUXr7CPXEoMXsaWInUsvw/viewform?usp=sharing",
-    "Group classes waitlist": "https://docs.google.com/forms/d/e/1FAIpQLSfIGmqGZU7D3mwvOGJxv2QqtBaBw6frYPCZWAg9-CX2pJbFzQ/viewform?usp=sharing",
+    "Conversational group waitlist": "https://open.spotify.com/episode/3nV8U27tpMuWdiQbeuuAOI?si=85624ab3d83e48ec",
+    "One on one waitlist": "https://open.spotify.com/track/0wQCKR9OFjYu5Kzrk7WivJ?si=2bdca55e075648f4",
+    "Group classes waitlist": "https://youtube.com/playlist?list=PLiSXvPiNzG5Ip24ZY75Zy23HAoMIokOfy&si=v4dvV9TuhRRF7Ayq"
   };
   return (
     <div className="text-center bg-[#FDF2F2] py-12">

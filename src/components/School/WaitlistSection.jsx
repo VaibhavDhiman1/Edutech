@@ -2,9 +2,9 @@ import React from "react";
 
 function WaitlistSection() {
   const cards = [
-    { img: "School/image 3.svg", title: "Conversational Group" },
-    { img: "School/image 2.svg", title: "1 to 1 corporate batches" },
-    { img: "School/image 4.svg", title: "Group corporate batches" },
+    { img: "School/image 8.png", title: "Conversational Group" },
+    { img: "School/image 9.png", title: "1 to 1 corporate batches" },
+    { img: "School/image 10.png", title: "Group corporate batches" },
   ];
 
   return (
